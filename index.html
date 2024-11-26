@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Makati</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            /* padding-top: 80px; */
+        }
+        .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #111c4e; /* Adjust the navbar background color */
+}
+
+.navbar .navbar-brand {
+    color: #f9c640; /* Logo or text color */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #ffffff; /* Link color */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #ffdb73; /* Hover effect for links */
+}
+        /* Main Container Styles */
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    background-image: url('image/bg1.png'); /* Replace with your image path */
+    background-size: cover; /* Make the image cover the whole container */
+    background-position: center center; /* Center the image */
+    color: white; /* Text color */
+    text-align: center; /* Center the text horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+}
+
+
+        .recognitions {
+            margin-top: 40px; /* Add space between main container and affiliations */
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        /* Recognitions Section Styles */
+.recognitions h2 {
+    color: #111c4e; /* Change the font color */
+    font-size: 2rem; /* Adjust the font size */
+    margin-bottom: 40px; /* Optional: Adds some space below the heading */
+}
+
+/* Marquee Container */
+.marquee-container {
+    width: 100%;
+    overflow: hidden; /* Hide anything outside the container */
+    position: relative;
+}
+
+.marquee {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth transition for sliding */
+}
+
+.slide {
+    display: flex;
+    width: 100%; /* Each slide takes up the full container width */
+    justify-content: space-around;
+}
+
+.marquee-img {
+    width: 100px; /* Ensure images are the same size */
+    height: auto;
+    margin: 0 10px; /* Add space between images */
+}
+
+/* JavaScript-controlled animation */
+
+
+       /* Quick Figures Section */
+
+
+.quick-figures-inner {
+    background-color: #111c4e; /* White background for the figures container */
+    padding: 30px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for some depth */
+}
+
+.quick-figures h2 {
+    color: #ffffff; /* White color for the heading */
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center; /* Center the heading */
+}
+
+
+.figure-box {
+    background-color: #1a2a6c; /* Dark blue background for the boxes */
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease; /* Smooth hover effect */
+    margin-bottom: 20px;
+}
+
+.figure-box h3 {
+    color: #ffcc00; /* Yellow color for the number */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.figure-box p {
+    color: #ffffff; /* White color for the description */
+    font-size: 1.1rem;
+}
+
+/* Hover Effect */
+.figure-box:hover {
+    background-color: #ffcc00; /* Yellow on hover */
+    color: #111c4e; /* Dark blue text on hover */
+}
+
+.figure-box:hover h3 {
+    color: #111c4e; /* Change number color to dark blue */
+}
+
+.figure-box:hover p {
+    color: #111c4e; /* Change description text color to dark blue */
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .quick-figures h2 {
+        font-size: 1.5rem; /* Adjust heading size on smaller screens */
+    }
+
+    .figure-box {
+        padding: 15px;
+    }
+
+    .figure-box h3 {
+        font-size: 2rem;
+    }
+}
+
+        /* Common styles for Mission, Vision, and Core Values */
+
+
+/* Style the heading */
+.mission h2, .vision h2, .core-values h2 {
+    color: #111c4e; /* Dark blue for the heading */
+    font-size: 2rem;
+    text-align: center; /* Center-align the headings */
+    margin-bottom: 20px; /* Space below the heading */
+    margin-top: 20px;
+}
+
+/* Style the paragraph text */
+.mission p, .vision p, .core-values p {
+    color: #555; /* Dark gray for the text */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center; /* Center-align the text */
+}
+
+/* Style the images */
+.mission img, .vision img, .core-values img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+    margin-top: 50px;
+}
+
+/* Hover effect for images */
+.mission img:hover, .vision img:hover, .core-values img:hover {
+    transform: scale(1.05); /* Zoom in the image slightly */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .mission, .vision, .core-values {
+        padding: 30px 0; /* Less padding on smaller screens */
+    }
+
+    .mission h2, .vision h2, .core-values h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    .mission p, .vision p, .core-values p {
+        font-size: 1rem; /* Smaller font size for text */
+    }
+}
+/* Video Container */
+.video-container {
+    background-color: #111c4e; /* Light background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for a 3D effect */
+    text-align: center; /* Center content in the container */
+    margin-top: 40px;
+}
+
+/* Title Style */
+.video-container h3 {
+    color: #fff; /* Dark blue color for the title */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Video Thumbnail Container */
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 200px; /* You can adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Button Overlay */
+.video-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ffcc00; /* Yellow color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.video-container p {
+    color: white; /* Set paragraph text to white */
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.video-button:hover {
+    background-color: #111c4e; /* Dark blue color */
+    color: #ffcc00; /* Yellow text on hover */
+}
+
+.board-of-directors {
+    position: relative;
+    background-color: #111c4e;
+    padding: 60px 15px;
+    color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.board-of-directors .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(17, 28, 78, 0.8); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.board-of-directors .content {
+    position: relative;
+    z-index: 2;
+}
+
+.board-of-directors h2 {
+    font-size: 2.5rem;
+    color: #ffcc00; /* Yellow heading */
+    margin-bottom: 40px;
+}
+
+.board-box {
+    background-color: #0056b3; /* Blue background */
+    color: #ffffff; /* White text */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.board-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ffffff; /* White border around the image */
+}
+
+.board-box h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.board-box p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.board-box:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+    background-color: #003a80; /* Darker blue on hover */
+}
+
+        /* Footer Styles */
+.footer {
+    background-color: #111c4e;
+    padding: 40px 0;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer h4 {
+    font-size: 18px;
+    color: #f9c640;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #d1d1d1;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #f9c640;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #ffdb73;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #f9c640;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #ffdb73;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #f9c640;
+    padding-top: 10px;
+    color: #d1d1d1;
+    text-align: center;
+}
+
+.footer-bottom span {
+    color: #f9c640;
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="image/logo.jpg" alt="UMAK Logo" style="height: 30px; margin-right: 10px;"> University of Makati
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="visitumak.html">Visit UMAK</a></li>
+                <li class="nav-item"><a class="nav-link" href="calendar.html">University Calendar</a></li>
+                <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Container -->
+<div class="main-container">
+    <div class="overlay"></div>
+    <!-- <h1>Welcome to the University of Makati</h1> -->
+</div>
+
+<!-- Recognitions and Affiliations -->
+<div class="recognitions">
+    <h2>Recognitions and Affiliations</h2>
+    <div class="marquee-container">
+        <div class="marquee">
+            <div class="slide">
+                <img src="image/recog1.png" alt="Affiliation 1" class="marquee-img">
+                <img src="image/recog2.png" alt="Affiliation 2" class="marquee-img">
+                <img src="image/recog3.png" alt="Affiliation 3" class="marquee-img">
+            </div>
+            <div class="slide">
+                <img src="image/recog4.png" alt="Affiliation 4" class="marquee-img">
+                <img src="image/recog5.png" alt="Affiliation 5" class="marquee-img">
+                <img src="image/recog6.png" alt="Affiliation 6" class="marquee-img">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Quick Figures -->
+<div class="quick-figures container-fluid">
+    <div class="quick-figures-inner">
+        <h2>Quick Figures</h2>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="figure-box">
+                    <h3>10,000+</h3>
+                    <p>College Students</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="figure-box">
+                    <h3>5,000+</h3>
+                    <p>Senior High Students</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="figure-box">
+                    <h3>1,000+</h3>
+                    <p>Graduate Students</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="figure-box">
+                    <h3>500+</h3>
+                    <p>Professors and Staff</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Mission -->
+<div class="mission container">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="image/mission.png" alt="Mission" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h2>Mission</h2>
+            <p>To develop resilient, innovative, socially-responsible and excellent industry-ready practitioners and leaders through instruction, research, extension and production; and nurture highly competent and committed human resources.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Vision -->
+<div class="vision container">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2>Vision</h2>
+            <p>University of Makati shall be a premier globally recognized local university where integrated and sustainable quality education translates to social equity and excellence.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="image/vision.png" alt="Vision" class="img-fluid rounded shadow">
+        </div>
+    </div>
+</div>
+
+<!-- Core Values -->
+<div class="core-values container">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="image/core.png" alt="Core Values" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h2>Philosophy</h2>
+            <p>The University of Makati is the University of the City of Makati. We serve the children of less privileged citizens of the City so they can actively participate in and competitively partake of the City’s economic progress. We must never forget who we are, whom we are for, and what we have to do for those for whom we are.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Hymns -->
+<div class="videos container">
+    <!-- <h2>UMAK Hymns</h2> -->
+    <div class="row">
+        <!-- UMAK Hymn -->
+        <div class="col-md-6">
+            <div class="video-container">
+                <h3 class="text-center">UMAK Hymn</h3>
+                <div class="video-thumbnail" style="background-image: url('image/umakhymn.png');">
+                    <a href="https://youtu.be/llgi9JEj9Y8?si=VS70hcqiO_w2tGyZ" target="_blank" class="btn btn-primary video-button">Watch Video Here</a>
+                </div>
+                <p>Lyrics: <p>
+                    I<br>
+                    We cheer to the Alma Mater<br>
+                    (Dear) University of Makati<br>
+                    Rejoice, we’re here, onward marching<br>
+                    Be it shine, storm, cloud or rain<br>
+                    Let all our voices keep ringing<br>
+                    For the glory of our Alma Mater<br>
+                    Pride of Makati and our Fatherland<br>
+                    Beloved UMak proudly stands<br>
+                    
+                    II<br>
+                    Arise thy sons and daughters<br>
+                    Fill the air with the joy of Alma Mater<br>
+                    Resound our gladness and tidings<br>
+                    Every echo by far and near<br>
+                    Hail to thee, our dear beloved UMak<br>
+                    Faithfully we brace our mind and spirit<br>
+                    We’re proud to be at thy command<br>
+                    Future builders of this land<br>
+                    
+                    Repeat II<br>
+                    Finale<br>
+                    
+                    Dear University of Makati …<br>
+                    Future builder of this land
+                </p>
+                
+            </div>
+        </div>
+
+        <!-- Makati Hymn -->
+        <div class="col-md-6">
+            <div class="video-container">
+                <h3 class="text-center">Makati Hymn</h3>
+                <div class="video-thumbnail" style="background-image: url('image/makatihymn.png');">
+                    <a href="https://youtu.be/zzw_1LFYbSk?si=UsZahmGvMyQCL2V-" target="_blank" class="btn btn-primary video-button">Watch Video Here</a>
+                </div>
+                <p>Lyrics:<p>
+                    Pagmamahal sa Makati<br>
+                    Bayan na itatanghal<br>
+                    Sa ngalan ng mga malalaya na may pagtingin sa bansa<br>
+                    Diwa’t puso na natin sa Makati ibibigay!<br>
+                    Kapit bisig tayo itaguyod na natin<br>
+                    Ang magandang simula ang mag papaunlad ng bayan<br>
+                    O Makati na aming mahal<br>
+                    Bayan mo’y itatanghal<br>
+                    O Makati o Makati mahalin natin atin ito<br>
+                    Kapit bisig tayo itaguyod na natin<br>
+                    Ang maganda ng simula<br>
+                    Ang magpapaunlad ng bayan!<br>
+                    O Makati na aming mahal<br>
+                    Bayan mo’y itatanghal<br>
+                    O Makati o Makati mahalin natin atin ito
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Board of Directors -->
+<div class="board-of-directors container-fluid my-5" style="background-image: url('image/bg.jpg'); background-size: cover; background-position: center;">
+    <div class="overlay"></div>
+    <div class="content text-center py-5">
+        <h2>Board of Directors</h2>
+        <div class="row">
+            <!-- Director 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="board-box">
+                    <img src="image/board1.png" alt="Director 1">
+                    <h4>Professor Elyxzur C. Ramos, PhD, CESE</h4>
+                    <p>President, University of Makati</p>
+                </div>
+            </div>
+            <!-- Director 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="board-box">
+                    <img src="image/board2.png" alt="Director 2">
+                    <h4>Hon. Coun. Benedict B. Baniqued</h4>
+                    <p>Chairman, Committee on Education<br>Sangguniang Panlungsod</p>
+                </div>
+            </div>
+            <!-- Director 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="board-box">
+                    <img src="image/board3.png" alt="Director 3">
+                    <h4>Associate Professor Marivic E. Cuizon, PhD</h4>
+                    <p>President, Faculty Federation<br>Faculty Representative</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Director 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="board-box">
+                    <img src="image/board4.png" alt="Director 4">
+                    <h4>Prof. Jefferson L. Aragon</h4>
+                    <p>Alumni Representative, UMak Alumni Association</p>
+                </div>
+            </div>
+            <!-- Director 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="board-box">
+                    <img src="image/board5.png" alt="Director 5">
+                    <h4>Mr. Rey B. Blanco</h4>
+                    <p>Representative, UMak Administrative Employees</p>
+                </div>
+            </div>
+            <!-- Director 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="board-box">
+                    <img src="image/board6.png" alt="Director 6">
+                    <h4>Mr. Edgardo G. Lacson</h4>
+                    <p>Private Sector Representative</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Find Us Here -->
+            <div class="col-md-3">
+                <h4>Find Us Here</h4>
+                <p>
+                    University of Makati is located in the heart of the city,
+                    providing easy access for students and parents. Visit us to
+                    learn more about our programs and facilities.
+                </p>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="col-md-3">
+                <h4>Contact Us</h4>
+                <p>+123-456-7890</p>
+                <p>+332-543-8765</p>
+                <p>info@umak.edu</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">University Calendar</a></li>
+                    <li><a href="#">Admissions</a></li>
+                </ul>
+            </div>
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom text-center">
+            <p>
+                Created by <span>University of Makati</span> | All Rights Reserved!
+            </p>
+        </div>
+    </div>
+</footer>
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function moveToNextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides; // Cycle through slides
+        const offset = -currentIndex * 100; // Move the carousel to the next slide
+        document.querySelector('.marquee').style.transform = `translateX(${offset}%)`;
+    }
+
+    // Move to the next slide every 5 seconds
+    setInterval(moveToNextSlide, 3000);
+</script>
+
+<!-- FontAwesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

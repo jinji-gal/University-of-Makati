@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Makati</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            /* padding-top: 80px; */
+        }
+        .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #111c4e; /* Adjust the navbar background color */
+}
+        /* Main Container Styles */
+        .main-container {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Full height of the viewport */
+    background-image: url('image/bg.jpg'); /* Replace with your image path */
+    background-size: cover; /* Make the image cover the whole container */
+    background-position: center center; /* Center the image */
+    color: white; /* Text color */
+    text-align: center; /* Center the text horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+}
+.main-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(17, 28, 78, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+.main-container .content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .main-container h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+
+.navbar .navbar-brand {
+    color: #f9c640; /* Logo or text color */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #ffffff; /* Link color */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #ffdb73; /* Hover effect for links */
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Title Styling */
+.offer-container {
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.offer-title {
+  font-size: 2rem;
+  color: #111c4e;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Updated Grid Styling for 5 Boxes Per Row */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Five boxes per row */
+  gap: 20px; /* Space between the boxes */
+  justify-content: center;
+}
+
+.offer-box {
+  background-color: white;
+  border: 2px solid #111c4e; /* Outline color */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Reduced padding */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 250px; /* Slightly smaller width to fit 5 boxes per row */
+  height: auto;
+  margin: 0 auto; /* Center boxes */
+}
+
+.offer-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  border-color: #f9c640; /* Change outline color on hover */
+}
+
+/* Logo Styling */
+.offer-logo {
+  width: 60px; /* Smaller logo size */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Heading in Box */
+.offer-box h2 {
+  font-size: 1rem; /* Smaller font size */
+  color: #111c4e;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 8px 16px; /* Smaller button size */
+  font-size: 0.9rem; /* Adjust font size */
+  color: white;
+  background-color: #111c4e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #f9c640; /* Hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .offer-grid {
+    grid-template-columns: repeat(4, 1fr); /* Four boxes per row on medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .offer-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three boxes per row on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two boxes per row on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .offer-grid {
+    grid-template-columns: repeat(1, 1fr); /* One box per row on mobile */
+  }
+}
+
+/* Qualifications Container */
+.qualifications-container {
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.qualifications-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #111c4e;
+  margin-bottom: 20px;
+}
+
+/* Two-Column Grid */
+.qualifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Qualification Box Styling */
+.qualification-box {
+  background-color: white;
+  border: 2px solid #111c4e;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.qualification-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styles */
+.qualification-heading {
+  font-size: 1.2rem;
+  color: #111c4e;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* List Styling */
+.qualification-box ul {
+  padding-left: 10px;
+  line-height: 1.8;
+}
+
+.qualification-box ul li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .qualifications-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+}
+
+      
+        /* Footer Styles */
+.footer {
+    background-color: #111c4e;
+    padding: 40px 0;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer h4 {
+    font-size: 18px;
+    color: #f9c640;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #d1d1d1;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #f9c640;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #ffdb73;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #f9c640;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #ffdb73;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #f9c640;
+    padding-top: 10px;
+    color: #d1d1d1;
+    text-align: center;
+}
+
+.footer-bottom span {
+    color: #f9c640;
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="image/logo.jpg" alt="UMAK Logo" style="height: 30px; margin-right: 10px;"> University of Makati
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="visitumak.html">Visit UMAK</a></li>
+                <li class="nav-item"><a class="nav-link" href="calendar.html">University Calendar</a></li>
+                <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+ <!-- Main Section -->
+ <div class="main-container">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Visit University of Makati</h1>
+    </div>
+</div>
+
+<div class="offer-container">
+  <h1 class="offer-title">What We Offer</h1>
+  <div class="offer-grid">
+    <div class="offer-box">
+      <img src="image/prog1.png" alt="CCAPS Logo" class="offer-logo">
+      <h2>College of Continuing, Advanced and Professional Studies (CCAPS)</h2>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="offer-box">
+      <img src="image/prog2.png" alt="Institute of Arts and Design Logo" class="offer-logo">
+      <h2>Institute of Arts and Design</h2>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="offer-box">
+      <img src="image/prog3.png" alt="CBFS Logo" class="offer-logo">
+      <h2>College of Business and Financial Science (CBFS)</h2>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="offer-box">
+      <img src="image/prog4.png" alt="IOA Logo" class="offer-logo">
+      <h2>Institute of Accountancy (IOA)</h2>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="offer-box">
+      <img src="image/prog5.png" alt="College of Computing Logo" class="offer-logo">
+      <h2>College of Computing and Information Science</h2>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="offer-box">
+      <img src="image/prog6.png" alt="CGPP Logo" class="offer-logo">
+      <h2>College of Governance and Public Policy (CGPP)</h2>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="offer-box">
+      <img src="image/prog7.png" alt="ION Logo" class="offer-logo">
+      <h2>Institute of Nursing (ION)</h2>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="offer-box">
+      <img src="image/prog8.png" alt="CCSE Logo" class="offer-logo">
+      <h2>College of Construction Sciences and Engineering (CCSE)</h2>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="offer-box">
+      <img src="image/prog9.png" alt="IIHS Logo" class="offer-logo">
+      <h2>Institute of Imaging Health Science (IIHS)</h2>
+      <button class="btn">Learn More</button>
+    </div>
+    <div class="offer-box">
+      <img src="image/prog10.png" alt="CHK Logo" class="offer-logo">
+      <h2>College of Human Kinetics (CHK)</h2>
+      <button class="btn">Learn More</button>
+    </div>
+  </div>
+</div>
+
+<div class="qualifications-container">
+  <h2 class="qualifications-title">Qualifications</h2>
+  <div class="qualifications-grid">
+    <!-- Senior High School Column -->
+    <div class="qualification-box">
+      <h3 class="qualification-heading">Senior High School</h3>
+      <p><strong>QUALIFICATIONS</strong></p>
+      <ul>
+        <li>New Incoming Grade 11</li>
+        <li>Current Grade 10 students or Junior High School graduates may apply</li>
+        <li>
+          <strong>ALTERNATIVE LEARNING SYSTEM PASSERS</strong><br>
+          Students who passed the ALS Accreditation and Equivalency (A&E) Test and are eligible to transfer to Senior High School as indicated in the ALS Certificate of Rating (COR)
+        </li>
+        <li>
+          <strong>PERSONS WITH DISABILITY (PWD)</strong><br>
+          Persons with Disability (PWD) registered under the City of Makati may apply but are subject to screening by the UMak Center for Inclusive Education, Gender, and Development (CIEGAD)
+        </li>
+        <li>
+          <strong>Note:</strong> The University prioritizes Makati voters or those graduates of any Makati Junior High School whose Grade 9 GWA is 88 or better. Those whose Grade 9 GWA is 85 to 87.99 will be put on the waiting list. Only the top 1500 applicants will be considered.
+        </li>
+      </ul>
+    </div>
+    
+    <!-- College Column -->
+    <div class="qualification-box">
+      <h3 class="qualification-heading">College</h3>
+      <p><strong>QUALIFICATIONS</strong></p>
+      <ul>
+        <li><strong>NEW FRESHMEN</strong><br>Student-Applicants who are in Grade 12 this academic year.</li>
+        <li>
+          <strong>ALTERNATIVE LEARNING SYSTEM PASSERS</strong><br>
+          Student-Applicants who passed the ALS Accreditation and Equivalency (A&E) Test and are eligible for college admission as indicated in the ALS Certificate of Rating
+        </li>
+        <li>
+          <strong>TRANSFEREES</strong><br>
+          Student-Applicants who have enrolled or taken college units from a different college or university.<br>
+          - New-Curriculum students with a Senior High School diploma.<br>
+          - Old-Curriculum students must have completed at least two (2) years or four (4) semesters in college with:<br>
+          &emsp;- Met the Graded Weight Average (GWA) and other requirements of the College<br>
+          &emsp;- No accumulated failing grades, Unofficially Dropped (UD), or Incomplete (Inc.) exceeding nine (9) units in one semester or fifteen (15) units total.<br>
+          &emsp;- Be an incoming third-year student.
+        </li>
+        <li>
+          <strong>SECOND COURSERS</strong><br>
+          Students who have completed a degree/program and wish to pursue another degree in the University and have met the grade requirements of the college.
+        </li>
+        <li>
+          <strong>PERSONS WITH DISABILITY (PWD)</strong><br>
+          Persons with Disability (PWD) registered under the City of Makati may apply but are subject to screening by the UMak Center for Inclusive Education, Gender, and Development (CIEGAD)
+        </li>
+        <li>
+          <strong>Note:</strong> Non-Makati applicants should have a GWA of 90 or better. Only the top 300 applicants will be considered. We don’t accept incoming third-year transferees both Makati and non-Makati applicants.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Find Us Here -->
+            <div class="col-md-3">
+                <h4>Find Us Here</h4>
+                <p>
+                    University of Makati is located in the heart of the city,
+                    providing easy access for students and parents. Visit us to
+                    learn more about our programs and facilities.
+                </p>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="col-md-3">
+                <h4>Contact Us</h4>
+                <p>+123-456-7890</p>
+                <p>+332-543-8765</p>
+                <p>info@umak.edu</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">University Calendar</a></li>
+                    <li><a href="#">Admissions</a></li>
+                </ul>
+            </div>
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom text-center">
+            <p>
+                Created by <span>University of Makati</span> | All Rights Reserved!
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- FontAwesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
